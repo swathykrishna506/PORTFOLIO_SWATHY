@@ -1,0 +1,211 @@
+    /*  
+        #F79B72  -orange
+        #2A4759  -blue
+        #DDDDDD  -grey
+        #EEEEEE  -white
+    */
+    
+   :root {
+      --primary-color: #0118D8;
+      --secondary-color: #ffffff;
+      --text-color: #333333;
+      --bg-light: #f3e9e9;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      --radius: 12px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-light);
+      color: var(--text-color);
+      scroll-behavior: smooth;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary-color), #357ab8);
+      color: var(--secondary-color);
+      padding: 5px 20px;
+      text-align: center;
+      animation: fadeInDown 1s ease-out;
+    }
+
+    header h1 {
+      font-size: 40px;
+      /* margin-bottom: 10px; */
+
+    }
+
+    
+
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: var(--primary-color);
+    }
+
+    #about {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 20px;
+    }
+
+    #about .about-text {
+      flex: 1 1 55%;
+    }
+
+    #about img {
+      flex: 1 1 40%;
+      max-width: 100%;
+      border-radius: 50%;
+      transition: transform 0.3s;
+    }
+
+    #about img:hover {
+      transform: scale(1.05);
+    }
+
+    .about-text p {
+      margin-bottom: 10px;
+    }
+
+    .hire-btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .hire-btn:hover {
+      background-color: #2f5ca9;
+      transform: scale(1.05);
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .project {
+      background-color: var(--secondary-color);
+      padding: 20px;
+      box-shadow: var(--shadow);
+      border-radius: var(--radius);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .project:hover {
+      transform: scale(1.05);
+    }
+
+    .skills-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+    }
+
+    .skill-card {
+      background: white;
+      padding: 15px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .skill-card:hover {
+      transform: scale(1.1);
+    }
+
+    .skill-card img {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 10px;
+    }
+
+    form {
+      background-color: var(--secondary-color);
+      padding: 20px;
+      box-shadow: var(--shadow);
+      border-radius: var(--radius);
+    }
+
+    form input,
+    form textarea {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      width: 100%;
+    }
+
+    form textarea {
+      resize: vertical;
+    }
+
+    button {
+      padding: 12px;
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #2f5ca9;
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: var(--primary-color);
+      color: var(--secondary-color);
+      margin-top: 40px;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
